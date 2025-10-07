@@ -108,4 +108,21 @@ public class AppConfig {
 
 		return new Menu(pizzaList, drinkList, toppingsList);
 	}
+
+    @Bean( name = "table1")
+
+    public Table tablebean1 (){ return new Table( 10,4, true);}
+
+
+
+    @Bean( name = "table2")
+
+    public Table tablebean2 (){ return new Table( 11,7, true);}
+
+
+    @Bean(name ="order1")
+
+    public Order order1 (){ return new Order(001, StatoOrdine.PRONTO, pizzaMargheritaBean(), toppingTomatoBean(), d>,  }
+
+
 }
