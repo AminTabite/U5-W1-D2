@@ -3,6 +3,7 @@ package com.epicode.U5D1.entities;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -120,9 +121,9 @@ public class AppConfig {
     public Table tablebean2 (){ return new Table( 11,7, true);}
 
 
-    @Bean(name ="order1")
+   // @Bean(name ="order1")
 
-    public Order order1 (){ return new Order(001, StatoOrdine.PRONTO, pizzaMargheritaBean(), toppingTomatoBean(), d>,  }
+   // public Order order1 (){ return
 
 
 }

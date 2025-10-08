@@ -23,11 +23,12 @@ public class Order {
     private LocalTime orderTime;
     @Value(("${coperto}"))
     private double copertoprice;
+    private Table tableorder;
 
-    private  double conto;
+    private  double contocontorni;
 
 
-    public Order(long id, StatoOrdine state, Pizza pizzarequest, List<Item> contorno, int nCoperti, LocalTime orderTime, double copertoprice, double conto) {
+    public Order(long id, StatoOrdine state, Pizza pizzarequest, List<Item> contorno, int nCoperti, LocalTime orderTime, Table tableorder) {
         this.id = id;
         this.state = state;
         this.pizzarequest = pizzarequest;
@@ -35,16 +36,16 @@ public class Order {
         this.nCoperti = nCoperti;
         this.orderTime = orderTime;
         this.copertoprice = copertoprice;
-        this.conto = conto;
+        this.tableorder = tableorder;
     }
 
     public double getConto() {
 
         double total = 0;
         for (Item i : contorno) {
-            total = conto + i.getPrice();
+            total = contocontorni + i.getPrice();
 
-            return total;
+
         }
 
       double sumconto =  (pizzarequest.getPrice() + total) + (copertoprice * nCoperti);
